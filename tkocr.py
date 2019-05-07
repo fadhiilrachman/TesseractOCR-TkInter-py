@@ -17,7 +17,7 @@ def convertImgToText():
 		text = pytesseract.image_to_string(img, lang='eng')
 		result_textbox.delete('1.0', END)
 		result_textbox.insert(END, text)
-		with open('output.txt', 'a') as f:
+		with open('output.txt', 'w') as f:
 			f.write(text)
 	else:
 		result_textbox.delete('1.0', END)
